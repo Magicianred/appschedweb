@@ -1,0 +1,515 @@
+/* ----------------------------------------------------------------------------
+ * Easy!Appointments - Open Source Web Scheduler
+ *
+ * @package     EasyAppointments
+ * @author      A.Tselegidis <alextselegidis@gmail.com>
+ * @copyright   Copyright (c) 2013 - 2018, Alex Tselegidis
+ * @license     http://opensource.org/licenses/GPL-3.0 - GPLv3
+ * @link        http://easyappointments.org
+ * @since       v1.0.0
+ * ---------------------------------------------------------------------------- */
+
+@-moz-document url-prefix() {
+    body .checkbox input[type="checkbox"] {
+        float: left;
+    }
+}
+
+body .custom-qtip {
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    box-shadow: 1px 1px 3px #767676;
+    background: #EFF6FD;
+    font-size: 12px;
+    line-height: 20px;
+    color: #0072e5;
+}
+
+body .ui-widget {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+}
+
+body .ui-widget-overlay {
+    background: #000 50% 50% repeat-x;
+    opacity: .5;
+    filter: Alpha(Opacity=50);
+}
+
+body .ui-dialog .ui-dialog-titlebar-close {
+    display: none;
+}
+
+body .ui-draggable .ui-dialog-titlebar {
+    background: #0072e5;
+    color: #FFF;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 4px solid #bed8ec;
+    margin-bottom: 10px;
+}
+
+body .ui-dialog {
+    padding: 0;
+    z-index: 2000;
+    border: none !important;
+    box-shadow: 0 0 10px #333;
+}
+
+body .ui-dialog .ui-dialog-buttonpane {
+    padding: .3em 1em .3em .4em;
+    border: none;
+}
+
+body .ui-button .ui-icon,
+body .ui-button:hover .ui-icon {
+    background-image: url('../ext/jquery-ui/images/ui-icons_222222_256x240.png');
+}
+
+body .ui-dialog #error-technical {
+    max-width: 500px;
+}
+
+body .ui-widget.ui-widget-content {
+    border: 1px solid #0072e5;
+    padding: 0;
+}
+
+
+
+
+body #ui-datepicker-div {
+    margin-top: 4px;
+}
+
+body .ui-datepicker .ui-widget-header {
+    border: none;
+    background: #0072e5;
+    border-radius: 0;
+}
+
+body .ui-datepicker .ui-widget-header .ui-icon {
+    background-image: url("../ext/jquery-ui/images/ui-icons_ffffff_256x240.png")
+}
+
+body .ui-datepicker .ui-datepicker-title {
+    color: white;
+    padding: 8px 5px;
+}
+
+body .ui-datepicker th {
+    background: #0072e5;
+    color: #FFF;
+}
+
+body .ui-datepicker tbody tr:first-child td {
+    margin-top: 5px;
+}
+
+body .ui-datepicker td a,
+body .ui-datepicker td span {
+    border: none !important;
+    background: none !important;
+    color: #7ab5f1 !important;
+    text-align: center !important;
+    width: 32px;
+    height: 32px;
+    line-height: 2;
+}
+
+html body .ui-datepicker td a.ui-state-active {
+    color: #FFF !important;
+    font-weight: bold !important;
+    background: #0072e5 !important;
+    border-radius: 50px;
+    width: 22px;
+    height: 22px;
+    line-height: 1.3;
+    margin: 4px;
+}
+
+body .ui-datepicker td a.ui-state-highlight {
+    background: #dbebfb !important;
+    border-radius: 67px;
+    color: #FFF !important;
+    width: 22px;
+    height: 22px;
+    line-height: 1.3;
+    margin: 4px;
+
+}
+
+body .ui-datepicker .ui-datepicker-prev-hover {
+    top: 2px !important;
+    left: 2px !important;
+    background: #80ace1;
+    border-color: #80ace1;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+body .ui-datepicker .ui-datepicker-next-hover {
+    top: 2px !important;
+    right: 2px !important;
+    background: #80ace1;
+    border-color: #80ace1;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+body .ui-datepicker .ui-slider-handle {
+    border-radius: none;
+    border-color: #3DD481;
+    background-color: #3DD481;
+}
+
+body .ui-priority-primary,
+body .ui-widget-content .ui-priority-primary,
+body .ui-widget-header .ui-priority-primary {
+    font-weight: normal;
+}
+
+body .ui-widget input, .ui-widget select,
+body .ui-widget textarea,
+body .ui-widget button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+body .ui-datepicker .ui-datepicker-buttonpane button {
+    padding: 6px 16px;
+}
+
+.breaks tr:hover td {
+    background: #FFFFC2 !important;
+}
+
+.working-plan td {
+    vertical-align: middle;
+}
+
+.breaks td {
+    vertical-align: middle;
+}
+
+li.language:hover {
+    cursor: pointer;
+    color: #005580;
+}
+
+#select-language {
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 5px;
+}
+
+#select-language.active {
+    box-shadow: 0 0 20px #1A865F;
+}
+
+#language-list {
+    list-style: none;
+    padding-left: 0px;
+}
+
+/* JQUERY UI DATETIME PICKER ADDON
+   ------------------------------------------------------------------------- */
+
+.ui-timepicker-div .ui-widget-header {
+    margin-bottom: 8px;
+}
+
+.ui-timepicker-div dl {
+    text-align: left;
+}
+
+.ui-timepicker-div dl dt {
+    float: left;
+    clear: left;
+    padding: 0 0 0 5px;
+}
+
+.ui-timepicker-div dl dd {
+    margin: 0 10px 10px 40%;
+}
+
+.ui-timepicker-div dl dd.ui_tpicker_time {
+    margin-bottom: 4px;
+}
+
+.ui-timepicker-div dl dd.ui_tpicker_hour,
+.ui-timepicker-div dl dd.ui_tpicker_minute {
+    padding-top: 8px;
+}
+
+.ui-timepicker-div td {
+    font-size: 90%;
+}
+
+.ui-tpicker-grid-label {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ui-timepicker-div .ui_tpicker_unit_hide {
+    display: none;
+}
+
+.ui-timepicker-div .ui_tpicker_time .ui_tpicker_time_input {
+    background: none;
+    color: inherit;
+    border: none;
+    outline: none;
+    width: 95%;
+}
+
+.ui-timepicker-div .ui_tpicker_time .ui_tpicker_time_input:focus {
+    border-bottom-color: #aaa;
+}
+
+.ui-timepicker-rtl {
+    direction: rtl;
+}
+
+.ui-timepicker-rtl dl {
+    text-align: right;
+    padding: 0 5px 0 0;
+}
+
+.ui-timepicker-rtl dl dt {
+    float: right;
+    clear: right;
+}
+
+.ui-timepicker-rtl dl dd {
+    margin: 0 40% 10px 10px;
+}
+
+/* Shortened version style */
+.ui-timepicker-div.ui-timepicker-oneLine {
+    padding-right: 2px;
+}
+
+.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_time,
+.ui-timepicker-div.ui-timepicker-oneLine dt {
+    display: none;
+}
+
+.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_time_label {
+    display: block;
+    padding-top: 2px;
+}
+
+.ui-timepicker-div.ui-timepicker-oneLine dl {
+    text-align: right;
+}
+
+.ui-timepicker-div.ui-timepicker-oneLine dl dd,
+.ui-timepicker-div.ui-timepicker-oneLine dl dd > div {
+    display: inline-block;
+    margin: 0;
+}
+
+.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_minute:before,
+.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_second:before {
+    content: ':';
+    display: inline-block;
+}
+
+.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_millisec:before,
+.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_microsec:before {
+    content: '.';
+    display: inline-block;
+}
+
+.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_unit_hide,
+.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_unit_hide:before {
+    display: none;
+}
+
+/* LOADING SPINNER
+   ------------------------------------------------------------------------- */
+
+.is-loading {
+    position: relative;
+}
+
+.is-loading:before,
+.is-loading:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.animation:after {
+    width: 60px;
+    height: 60px;
+    margin: -25px 0 0 -25px;
+
+    border: 5px solid rgba(0, 0, 0, .4);
+    border-radius: 50px;
+}
+
+.animation:after {
+    border-bottom-color: transparent;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-reverse {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.any-element {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    margin-left: -30px;
+    margin-bottom: -30px;
+}
+
+#message_box pre {
+    max-height: 250px;
+}
+
+.vide-like-body{
+    color: black;
+    background-color: #f0f3f8;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.vide-like-container{
+    width: fit-content;
+    margin: auto;
+}
+
+.vide-like-subtitle{
+    font-size: 16px;
+    color: rgba(0,0,0,.6);
+}
+
+#login-frame.vide-like-login-frame{
+    margin-top: 3em;
+    max-width: 496px;
+    border-color: #fff;
+    background-color: #fff;
+    color: rgba(0,0,0,.87);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+#login-frame.vide-like-login-frame{
+    padding: 56px;
+}
+
+.vide-like-btn{
+    background-color: #0072e5;
+    color: white;
+}
+
+.vide-like-btn:focus,.vide-like-btn:hover {
+    background-color: #0072e5 !important;
+    color: white !important;
+}
+
+
+.vide-like-login-btn{
+    box-shadow: none;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .0892857143em;
+    text-indent: .0892857143em;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-top: 41px;
+    margin-bottom: 0.25em;
+}
+
+.vide-like-form-label{
+    left: 0px;
+    right: auto;
+    position: absolute;
+    transform-origin: top left;
+    color: rgba(0,0,0,.6);
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    top: 6px;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: .3s cubic-bezier(.25,.8,.5,1);
+    padding: 0;
+    margin: 0;
+}
+
+
+.vide-like-input-field{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    line-height: 20px;
+    padding: 8px 0;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    letter-spacing: normal;
+}
+
+.gone {
+    display: none !important;
+}
+
+.form-group.vide-like-form-group{
+}
+
+.p-0{
+    padding: 0 !important;
+}
+
+.m-0{
+    margin: 0 !important;
+}
+
+.csi-logo{
+    background-image: url('../img/csi_logo.png');
+    width: 140px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 2em 0;
+    float: right;
+}
+
+.upload-logo-filename{
+    align-self: center;
+    margin: 0.5em;
+}
+
+.logo-upload-wrapper{
+    display: flex;
+}
+
