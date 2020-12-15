@@ -112,7 +112,7 @@ mediante ```MYSQL_USER```), è sufficiente far puntare la configurazione del Web
 
 # Deployment
 Trasferire via FTP il codice sorgente (directory *appschedweb*) dalla macchina locale al server dell'ambiente di deploy.
-Ripetere in remoto la parte di configurazione illustrata in _Getting Started_ con l'esclusione della modifica del file hosts.
+Ripetere in remoto la parte di configurazione illustrata in [Getting Started](#getting-started) con l'esclusione della modifica del file hosts.
 
 Per i tenant successivi al primo, ripetere la copia di .env.example in _/storage/mu_ assegnando il nome che avrà il virtual host del
 nuovo tenant (ad esempio, _.comune-nuovo.vide.csi.it_) e su DNS definire il il virtual host del nuovo tenant come alias della macchina
