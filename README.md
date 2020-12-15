@@ -2,8 +2,13 @@
 **appschedweb**
 
 # Project Description
-_appschedweb_ è un prodotto CSI realizzato a partire da easyappointments-mu(https://github.com/Kuvvu/easyappointments-mu) che a sua volta è un fork pesantemente modificato del progetto GitHub [alextselegidis/easyappointments](https://github.com/alextselegidis/easyappointments).
-Per _appschedweb_ si è deciso di partire da easyappointments-mu perché permette la realizzazione del multi tenant.
+_appschedweb_ è una web application per la gestione delle prenotazioni effettuate dagli utenti delle pubbliche amministrazioni.
+Permette di gestire sia gli appuntamenti presi ad uno sportello fisico dell'ente sia quelli con modalità remota con l'aggancio al modulo *vide-pwa*
+che crea la videoconferenza tra operatore e cittadino.
+
+_appschedweb_ è un prodotto CSI realizzato a partire da [easyappointments-mu](https://github.com/Kuvvu/easyappointments-mu) che a sua volta è
+un fork pesantemente modificato del progetto GitHub [alextselegidis/easyappointments](https://github.com/alextselegidis/easyappointments).
+Per _appschedweb_ si è deciso di partire da *easyappointments-mu* perché permette la realizzazione del multi tenant.
 
 # Configurations
 Il template di file di configurazione si trova nel file *.env.example* che contiene i seguenti parametri.
@@ -106,7 +111,12 @@ Dopo aver aggiunto il file .env per il nuovo tenant (ad esempio, .comune-esempio
 mediante ```MYSQL_USER```), è sufficiente far puntare la configurazione del Web Server alla direcory /src di appschedweb.
 
 # Deployment
-TODO
+Trasferire via FTP il codice sorgente (directory *appschedweb*) dalla macchina locale al server dell'ambiente di deploy.
+Ripetere in remoto la parte di configurazione illustrata in _Getting Started_ con l'esclusione della modifica del file hosts.
+
+Per i tenant successivi al primo, ripetere la copia di .env.example in _/storage/mu_ assegnando il nome che avrà il virtual host del
+nuovo tenant (ad esempio, _.comune-nuovo.vide.csi.it_) e su DNS definire il il virtual host del nuovo tenant come alias della macchina
+di deploy di appschedweb.
 
 # Versioning
 Per la gestione del codice sorgente viene utilizzata la metodologia [Semantic Versioning](https://semver.org/).
@@ -114,7 +124,11 @@ Per la gestione del codice sorgente viene utilizzata la metodologia [Semantic Ve
 # Authors
 Gli autori della componente **Appschedweb** sono:
 
-TODO
+- [Andrea Caligaris](mailto:andrea.caligaris@csi.it)
+- [Simone Ferraris](mailto:simone.ferraris@csi.it)
+- [Riccardo Franco](mailto:riccardo.franco@csi.it)
+- [Marco Lucchesi](mailto:marco.lucchesi@consulenti.csi.it)
+- [Carlo Peraudo](mailto:carlo.peraudo@consulenti.csi.it)
 
 # Copyrights
 (C) Copyright 2020 CSI Piemonte
