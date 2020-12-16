@@ -146,3 +146,5 @@ Gli autori della componente **Appschedweb** sono:
 Questo software è distribuito con licenza [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.html)
 
 Consulta il file [LICENSE.txt](LICENSE.txt) per i dettagli sulla licenza.
+
+In [Bom.csv](Bom.csv) è presente l'elenco delle librerie di terze parti utilizzate in *appschedweb*.
