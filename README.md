@@ -8,7 +8,16 @@ che crea la videoconferenza tra operatore e cittadino.
 
 _appschedweb_ è un prodotto CSI realizzato a partire da [easyappointments-mu](https://github.com/Kuvvu/easyappointments-mu) che a sua volta è
 un fork pesantemente modificato del progetto GitHub [alextselegidis/easyappointments](https://github.com/alextselegidis/easyappointments).
-Per _appschedweb_ si è deciso di partire da *easyappointments-mu* perché permette la realizzazione del multi tenant.
+Per _appschedweb_ si è deciso di partire da *easyappointments-mu* (versione presente sul branch *master*) perché permette la realizzazione del multi tenant.
+Le differenze rispetto ai progetti originari [alextselegidis/easyappointments](https://github.com/alextselegidis/easyappointments) e [easyappointments-mu](https://github.com/Kuvvu/easyappointments-mu)
+sono elencate qui di seguito:
+
+* aggiunta interazione - mediante invocazioni di API e navigazione Web - con il modulo esterno di videoconferenza [vide-pwa](https://github.com/csipiemonte/vide-pwa);
+* differenziazione dello sportello per consentire sia gli appuntamenti in presenza sia quelli da remoto in videoconferenza;
+* modifica dei template delle email spedite a cittadino ed operatore di sportello una volta conclusa la prenotazione da interfaccia web;
+* azzerato il prezzo a servizio e aggiunto controllo sul numero massimo di servizi (sportelli) per ente;
+* inserita la gestione dei giorni di chiusura di ciascun sportello;
+* implementata la possibilità di caricare il logo dell'ente sull'interfaccia web.
 
 # Configurations
 Il template di file di configurazione si trova nel file *.env.example* che contiene i seguenti parametri.
