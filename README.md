@@ -51,7 +51,7 @@ che popola la directory _vendor_ con le dipendenze di terze parti.
 Per gli sviluppi in locale, utilizzare XAMPP (https://www.apachefriends.org/it/index.html). Eseguirne il download e installarlo sul proprio PC Windows.
 
 Aprire con un editor di testo il file di configurazione di Apache (httpd.conf) presente in XAMPP che è posizionato nella
-directory *xampp/apache/conf* e all'interno del tag <IfModule alias_module> inserire
+directory *xampp/apache/conf* e all'interno del tag ```<IfModule alias_module>``` inserire
 
 ```
 Alias /appschedweb <PATH_APPSCHEDWEB>/src
