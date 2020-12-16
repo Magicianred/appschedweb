@@ -8,7 +8,7 @@ che crea la videoconferenza tra operatore e cittadino.
 
 _appschedweb_ è un prodotto CSI realizzato a partire da [easyappointments-mu](https://github.com/Kuvvu/easyappointments-mu) che a sua volta è
 un fork pesantemente modificato del progetto GitHub [alextselegidis/easyappointments](https://github.com/alextselegidis/easyappointments).
-Per _appschedweb_ si è deciso di partire da *easyappointments-mu* (versione presente sul branch *master*) perché permette la realizzazione del multi tenant.
+Per _appschedweb_ si è deciso di partire da *easyappointments-mu* (versione presente sul branch *master* il 19 giugno 2020) perché permette la realizzazione del multi tenant.
 Le differenze rispetto ai progetti originari [alextselegidis/easyappointments](https://github.com/alextselegidis/easyappointments) e [easyappointments-mu](https://github.com/Kuvvu/easyappointments-mu)
 sono elencate qui di seguito:
 
