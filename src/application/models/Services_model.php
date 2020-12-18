@@ -159,8 +159,7 @@ class Services_Model extends CI_Model {
         {
             if ( ! is_numeric($service['price']))
             {
-            	// S.F. poichè non è presente il campo sulla view  lo valorizzo a NULL
-                $service['price'] = NULL;
+                throw new Exception('Service price is not numeric.');
             }
         }
 

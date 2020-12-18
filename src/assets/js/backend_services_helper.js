@@ -118,7 +118,7 @@
             const service = {
                 name: $('#service-name').val(),
                 duration: $('#service-duration').val(),
-                price: $('#service-price').val(),
+                price: 0.0, // appschedweb customization
                 currency: $('#service-currency').val(),
                 description: $('#service-description').val(),
                 availabilities_type: $('#service-availabilities-type').val(),
